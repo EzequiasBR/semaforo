@@ -1,0 +1,280 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   width: 100%;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content:center ;
+   min-height: 100vh;
+   background-color: rgb(60, 46, 184);
+}
+
+.container .semaforo{
+  width: auto;
+  height: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+}
+
+.caixa-externa {
+   display: table-cell;
+   vertical-align: middle;
+   width: 80px;
+   padding: 0;
+   z-index: 99;
+   position: absolute;
+   background-color: rgb(27, 26, 31);
+   box-shadow: 0 0 20px 3px black inset;
+   top: 50px;
+}
+
+.caixa-de-luz {
+   width:  85px;
+   height: 85px;
+   margin:0;
+   padding: 0;
+   background-color:  rgb(35, 35, 39);
+   border: 2px solid rgb(32, 31, 31);
+   box-shadow: 0 0 30px 3px rgb(6, 6, 6) inset;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 5px;
+   position: relative;
+   left: -5px;
+}
+
+.caixa-de-luz:nth-child(2n){
+   margin-block: 2px;
+}
+
+.caixa-de-luz .ponto-1 {
+   width: 3.5px;
+   height: 3.5px;
+   background-color: rgb(119, 118, 118);
+   position: relative;
+   top: -38px;
+   display: flex;
+   left: 1px;
+   font-size: 20pt;
+   border-radius: 50%;
+   box-shadow: 0.5px 0.5px 3px 0.2px rgb(54, 53, 53) inset;
+}
+
+.caixa-de-luz .ponto-2 {
+   width: 3.5px;
+   height: 3.5px;
+   background-color: rgb(119, 118, 118);
+   position: relative;
+   bottom: -38px;
+   display: flex;
+   left: -3px;
+   font-size: 20pt;
+   border-radius: 50%;
+   box-shadow: 0.5px 0.5px 3px 0.2px rgb(54, 53, 53) inset;
+}
+
+.caixa-de-luz .ponto-3 {
+   width: 3.5px;
+   height: 3.5px;
+   background-color: rgb(119, 118, 118);
+   position: relative;
+   top: -38px;
+   display: flex;
+   right: -3px;
+   font-size: 20pt;
+   border-radius: 50%;
+   box-shadow: 0.5px 0.5px 3px 0.2px rgb(54, 53, 53) inset;
+}
+
+.caixa-de-luz .ponto-4 {
+   width: 3.5px;
+   height: 3.5px;
+   background-color: rgb(119, 118, 118);
+   position: relative;
+   bottom: -38px;
+   display: flex;
+   left: 0px;
+   font-size: 20pt;
+   border-radius: 50%;
+   box-shadow: 0.5px 0.5px 3px 0.2px rgb(54, 53, 53) inset;
+}
+
+.luzes {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 77%;
+   height: 77%;
+   border-radius: 50%;
+   z-index: 77;
+}
+
+.luzes_top{
+   width: 78%;
+   height: 78%;
+   border-radius: 50%;
+   border: 1px solid rgb(43, 41, 41);
+   background-color: rgb(50, 50, 52);
+   position: absolute;
+   top: 2px; 
+   z-index: 8;
+   box-shadow: 0px 0px 5px 2px rgb(40, 38, 38) inset;
+}
+
+/* Lampada Apagada */
+
+#vermelho {
+   box-shadow: 0 0 15px 1px rgb(128, 12, 12) inset;
+   background-color: rgb(118, 14, 14);
+}
+
+.luz-1 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1.5px dotted rgba(170, 13, 13, 0.992);
+   padding: 0px;
+   margin: 0;
+   width: 90%;
+   height: 90%;
+   border-radius: 50%;
+   box-shadow: 0 0 5px 1px rgba(73, 6, 6, 0.989) inset;
+}
+
+#amarelo {
+   box-shadow: 0 0 20px 1px rgb(75, 67, 1) inset;
+   background-color: rgb(99, 118, 4);
+}
+
+.luz-2 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1.3px dotted rgb(175, 178, 0);
+   padding: 0px;
+   margin: 0;
+   width: 90%;
+   height: 90%;
+   border-radius: 50%;
+   box-shadow: 0 0 5px 1px rgb(128, 135, 9) inset;
+}
+
+#verde {
+   box-shadow: 0 0 15px 1px rgb(9, 37, 3) inset;
+   background-color: rgb(16, 103, 23);
+}
+
+.luz-3 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1.5px dotted rgb(34, 122, 14);
+   padding: 0px;
+   margin: 0;
+   width: 90%;
+   height: 90%;
+   border-radius: 50%;
+   box-shadow: 0 0 5px 1px rgb(16, 71, 6) inset;
+}
+
+/* Lampada Acessar */
+
+#vermelho.luzes.active {
+   box-shadow: 0 0 15px 1px rgb(248, 4, 4);
+   background-color: rgb(255, 3, 3);
+}
+
+.luz-1.active {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1.5px dotted rgba(248, 3, 3, 0.992);
+   padding: 0px;
+   margin: 0;
+   width: 90%;
+   height: 90%;
+   border-radius: 50%;
+   box-shadow: 0 0 2px 1px rgb(211, 9, 9);
+}
+
+#amarelo.luzes.active {
+   box-shadow: 0 0 20px 1px rgb(200, 209, 18);
+   background-color: rgb(234, 255, 3);
+}
+
+.luz-2.active {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px dotted rgb(226, 229, 21);
+   padding: 0px;
+   margin: 0;
+   width: 90%;
+   height: 90%;
+   border-radius: 50%;
+}
+
+#verde.luzes.active {
+   box-shadow: 0 0 15px 1px rgb(44, 148, 20);
+   background-color: rgb(0, 255, 21);
+}
+
+.luz-3.active {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1.5px dotted rgb(52, 255, 6);
+   padding: 0px;
+   margin: 0;
+   width: 90%;
+   height: 90%;
+   border-radius: 50%;
+   box-shadow: 0 0 2px 1px rgb(45, 204, 17);
+}
+
+/* POSTE */
+.container .poste{
+ height: 99vh;
+ width: 30px;
+ position: absolute;
+ background-color: grey;
+ border: 3px solid black;
+ box-shadow: 0 0 20px 3px black inset;
+ left: -70;
+}
+
+.container .parte-poste1{
+   width: 35px;
+   height: 35px;
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   background-color: rgb(93, 91, 91);
+   top: 6px;
+   z-index: 8;
+   border: 5px solid rgb(45, 44, 44);
+   clip-path: polygon(24% 64%, 77% 64%, 90% 87%, 90% 100%, 10% 100%, 10% 87%);
+   box-shadow: 0 0 15px 1px rgb(18, 18, 18) inset;
+}
+
+.container .parte-poste2{
+   width: 35px;
+   height: 35px;
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   background-color:  rgb(74, 73, 73);
+   top: 321px;
+   z-index: 8;
+   border: 5px solid rgb(45, 44, 44);
+   clip-path: polygon(24% 64%, 77% 64%, 90% 87%, 90% 100%, 10% 100%, 10% 87%);
+   box-shadow: 0 0 15px 1px rgb(19, 18, 18) inset;
+   transform: rotate(180deg);
+}
+
